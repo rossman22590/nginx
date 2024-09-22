@@ -1,4 +1,4 @@
-# Use the official NGINX image from Docker Hub
+# Use the official NGINX image from Docker Hubp
 FROM nginx:alpine
 
 # Copy the contents of the 'site' folder to the default NGINX web directory
