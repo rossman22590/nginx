@@ -1,10 +1,13 @@
-# Use the official NGINX image from Docker Hubp
+# Use the official NGINX image
 FROM nginx:alpine
 
-# Copy the contents of the 'site' folder to the default NGINX web directory
+# Remove any old files
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy new files to NGINX web directory
 COPY site /usr/share/nginx/html
 
-# Expose port 80 to allow traffic
+# Expose port 80
 EXPOSE 80
 
 # Start NGINX server
